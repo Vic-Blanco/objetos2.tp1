@@ -26,7 +26,9 @@ public class Concurso {
             if (LocalDate.now().equals(fechaInicio)) {
                 participante.cargarPuntos();
             }
-            //se debe validad que el participante no este insciripto en el concurso
+            if (estaInscripto(participante)) {
+                throw new RuntimeException("El participante ya esta inscripto");
+            }
             Inscripcion inscripcion = new Inscripcion(participante, this);
             inscripciones.add(inscripcion);
 
