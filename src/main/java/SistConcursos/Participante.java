@@ -17,7 +17,7 @@ public class Participante {
 
     int consultarPuntaje() {
         int puntos = puntaje;
-        return (puntos);
+        return (puntaje);
     }
 
     int getId() {
